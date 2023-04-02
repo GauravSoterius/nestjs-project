@@ -9,7 +9,7 @@ phases:
       nodejs: 16
     commands: 
       - echo Installing Deps
-      - yarn install v1.22.19
+      - yarn install
   build:
     commands:
       - echo Build started on `date`
