@@ -17,12 +17,12 @@ phases:
       - echo Build Image started on `date`
       - echo Building the Docker image....
       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 612000474429.dkr.ecr.us-east-1.amazonaws.com
-      - docker build -t nest-server:latest
-      - docker tag usde-server:latest 612000474429.dkr.ecr.us-east-1.amazonaws.com/nest-server:latest
+      - docker build -t usde-server:latest
+      - docker tag usde-server:latest 612000474429.dkr.ecr.us-east-1.amazonaws.com/usde-server:latest
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker Image
-      - docker push 612000474429.dkr.ecr.us-east-1.amazonaws.com/nest-server:latest
+      - docker push 612000474429.dkr.ecr.us-east-1.amazonaws.com/usde-server:latest
 
 
