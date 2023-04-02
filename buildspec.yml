@@ -3,7 +3,6 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR
-      - $(aws ecr get-login-password)
   install:
     runtime-versions: 
       nodejs: 16
